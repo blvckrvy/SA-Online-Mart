@@ -1,0 +1,189 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<main>
+    <section id="product-list">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="~/IMAGES/product 1.jpg" alt="product 1">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Product 1</h3>
+                    <h4>R 2500</h4>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="~/IMAGES/product 2.jpg" alt="product 2">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Product 2</h3>
+                    <h4>R 1500</h4>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="~/IMAGES/product 3.jpg" alt="product 3">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Product 3</h3>
+                    <h4>R 500</h4>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="~/IMAGES/product 4.jpg" alt="product 4">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Product 4</h3>
+                    <h4>R 300</h4>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <div class="cross-btn">
+            <i class="fa-solid close fa-xmark"></i>
+        </div>
+
+        <div id="modal-message">
+            <h2>Product Details</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste corrupti consectetur at doloremque illo beatae ex obcaecati possimus blanditiis reiciendis alias aspernatur suscipit inventore, facere ducimus neque sint dolorem laboriosam?</p>
+        </div>
+    </div>
+</div>
+
+<div id="cartModal" class="cart-modal">
+    <div class="cart-content">
+        <div class="cross-btn">
+            <i class="fa-solid close fa-xmark"></i>
+        </div>
+        <h2 style="font-size:xx-large;">My Cart</h2>
+        <h3>Items in Cart</h3>
+
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems">
+                <!-- Cart items will be dynamically inserted here -->
+            </tbody>
+        </table>
+
+        <h3>Total: <span id="cartTotal">R 0</span></h3>
+        <br>
+        <button id="checkoutButton">Checkout</button>
+    </div>
+</div>
+
+<div id="btnModal" class="btn-modal">
+    <div class="btn-modal-content">
+        <div class="cross-btn">
+            <i class="fa-solid close fa-xmark"></i>
+        </div>
+
+        <div id="modal-message">
+            <p>product added to cart!</p>
+        </div>
+    </div>
+</div>
+
+<div id="checkoutModal" class="checkout-modal">
+    <div class="checkout-modal-content">
+        <div class="cross-btn">
+            <i class="fa-solid close fa-xmark"></i>
+        </div>
+
+        <h2 style="font-size:xx-large;">Checkout</h2>
+        <h3>Fill out the form for payment</h3>
+
+        <form id="checkout-form">
+            <div id="box">
+                <div id="line1">
+                    <input type="text" id="fname" name="fname" placeholder="First Name" required />
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" required />
+                </div>
+
+                <div id="line2">
+                    <input type="email" id="email" name="email" placeholder="Email Address" required />
+                    <input type="tel" id="phone" name="phone" placeholder="Telephone" required />
+                </div>
+
+                <div id="line3">
+                    <input type="text" id="address" name="address" placeholder="Address" required />
+                    <input type="text" id="city" name="city" placeholder="City" required />
+                </div><br>
+
+                <div id="line4">
+                    <label for="visa">VISA</label>
+                    <input type="radio" id="visa" name="payment" value="visa">
+
+                    <label for="mastercard">Mastercard</label>
+                    <input type="radio" id="mastercard" name="payment" value="mastercard">
+
+                    <input type="tel" name="cardnumber" pattern="[0-9\s]{13,19}" maxlength="19" placeholder="Card Number" />
+                </div>
+
+            </div>
+
+            <div>
+                <button id="BTN" type="submit" name="proceed">Proceed</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="checkoutModal2" class="checkout-modal2">
+    <div class="checkout-modal-content2">
+        <div class="cross-btn">
+            <i class="fa-solid close fa-xmark"></i>
+        </div>
+
+        <h2 style="font-size:xx-large;">Summary</h2>
+        <h3>Review your order and proceed to payment</h3>
+
+        <table id="summaryTable">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="summaryItems">
+                <!-- Cart items will be dynamically inserted here -->
+            </tbody>
+        </table>
+
+        <h3>[Insert First and Last Names here]</h3>
+        <h3>[Insert Phone Number here]</h3>
+        <h3>[Insert Email here]</h3>
+        <h3>[Insert Home Address here]</h3>
+
+        <h3 style="text-align: end;">Total: <span id="cartTotal">R 0</span></h3>
+        <button id="Pay">Confirm and Pay</button>
+        <button id="back">Return</button>
+    </div>
+</div>

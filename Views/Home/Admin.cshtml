@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="admin.css">
+
+    <title>SA Online Mart</title>
+</head>
+<body>
+    <div class="root">
+        <div class="rightSide">
+            <div class="content-right">
+                <div class="header-title">
+                    <div class="title">
+                        <h1>Products list</h1>
+                        <div class="breadcrumbs">
+                            <div id="home">
+                                <i class="fa-solid fa-house"></i><a asp-action="Index">Home</a> |
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-bottle-droplet"></i> Products
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-btn">Add Product</button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="cross-btn">
+                <i class="fa-solid close fa-xmark"></i>
+            </div>
+
+            <div id="modal-message">
+                <p>
+                    Create a new product
+                </p>
+                <form class="form-product">
+                    <div class="input-container">
+                        <label>Name</label>
+                        <input class="name input-product" />
+                    </div>
+                    <div class="text-input-product-container">
+                        <div class="input-container">
+                            <label>Quantity</label>
+                            <input type="number" class="quantity input-product" />
+                        </div>
+
+                        <div class="input-container">
+                            <label>Price</label>
+                            <input class="price input-product" />
+                        </div>
+                    </div>
+
+                    <div class="input-container">
+                        <label>Details</label>
+                        <div>
+                            <textarea class="details input-product" rows="5"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="input-container">
+                        <label>Upload the image</label>
+                        <div class="input-file-container">
+                            <input class="image" type="file" />
+                        </div>
+                    </div>
+                    <button class="create-product-btn">Create Product</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\IMAGES\product 1.jpg" />
+    <None Include="wwwroot\IMAGES\product 2.jpg" />
+    <None Include="wwwroot\IMAGES\product 3.jpg" />
+    <None Include="wwwroot\IMAGES\product 4.jpg" />
+  </ItemGroup>
+
+</Project>
