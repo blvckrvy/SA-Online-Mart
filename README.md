@@ -1,5 +1,5 @@
-#SA Online Mart
-Eduvos ITEHA3 - ASP.NET Web App School Project
+Eduvos
+ITEHA3 - ASP.NET Web App School Project
 
 1. Clone the repository or Download the ZIP file 
 2. Navigate to the project directory 
